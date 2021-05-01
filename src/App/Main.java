@@ -6,21 +6,47 @@ import Memento.MementoDriver;
  * Driver Class.
  *
  * @author Daniel Hammer
- * @version 2021-04-28 21:21:59
+ * @version 2021-04-28
  */
 public class Main {
     /**
-     * Main
+     * Main method.
      *
      * @param args List of arguments supplied by executor.
      */
     public static void main(String[] args) {
-        //this.memento();
-        MementoDriver driver = new MementoDriver();
-        driver.go();
+
+        // Check args
+        if (args.length < 1) {
+            usage();
+            System.exit(1);
+        }
+
+        // Run the driver for every arg supplied
+        for (String arg : args) {
+            switch (arg.toLowerCase()) {
+
+                case "memento": memento();
+                                break;
+
+                default: System.out.println("`" + arg + "` not yet implemented");
+                         break;
+            }
+        }
     }
 
+    /**
+     * Displays a usage message.
+     */
+    public static void usage() {
+        System.out.println("Please supply at least one design pattern to showcase.");
+    }
+
+    /**
+     * Executes the Memento driver.
+     */
     public static void memento() {
+        System.out.println("\n------------- Executing Memento Driver -------------");
         MementoDriver driver = new MementoDriver();
         driver.go();
     }
