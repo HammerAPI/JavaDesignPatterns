@@ -2,6 +2,7 @@ package App;
 
 import Memento.MementoDriver;
 import Singleton.SingletonDriver;
+import Observer.ObserverDriver;
 
 /**
  * Driver Class.
@@ -33,7 +34,15 @@ public class Main {
                 case "singleton": singleton();
                                 break;
 
-                default: System.out.println("`" + arg + "` not yet implemented");
+                case "observer": observer();
+                                break;
+
+                case "all": memento();
+                            singleton();
+                            observer();
+                            break;
+
+                default: usage();
                          break;
             }
         }
@@ -43,7 +52,11 @@ public class Main {
      * Displays a usage message.
      */
     public static void usage() {
-        System.out.println("Please supply at least one design pattern to showcase.");
+        System.out.println("\nPlease supply at least one design pattern to showcase.");
+        System.out.println("\nImplemented design patterns are: "
+            + "Memento, "
+            + "Singleton, "
+            + "Observer");
     }
 
     /**
@@ -53,6 +66,7 @@ public class Main {
         System.out.println("\n------------- Executing Memento Driver -------------");
         MementoDriver driver = new MementoDriver();
         driver.go();
+        System.out.println("\n------------- Memento Driver Complete --------------");
     }
 
     /**
@@ -62,5 +76,16 @@ public class Main {
         System.out.println("\n------------ Executing Singleton Driver ------------");
         SingletonDriver driver = new SingletonDriver();
         driver.go();
+        System.out.println("\n------------ Singleton Driver Complete -------------");
+    }
+
+    /**
+     * Executes the Observer driver.
+     */
+    public static void observer() {
+        System.out.println("\n------------ Executing Observer Driver -------------");
+        ObserverDriver driver = new ObserverDriver();
+        driver.go();
+        System.out.println("\n------------ Observer Driver Complete --------------");
     }
 }

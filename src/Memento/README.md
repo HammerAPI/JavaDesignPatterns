@@ -28,9 +28,8 @@ There are plenty of ways to implement the Memento Design Pattern, from nested cl
 I chose interfaces as they provide a quick way for me to implement this pattern into existing projects.
 
 To see an implementation of this design pattern, see the `Implementation/` folder.
-To see this implementation in action, execute the `MementoDriver`.
 
-## Acknowledgements
+## Acknowledgments
 
 - [Refactoring.Guru](https://refactoring.guru/design-patterns/memento)
 - [TutorialsPoint](https://www.tutorialspoint.com/design_pattern/memento_pattern.htm)

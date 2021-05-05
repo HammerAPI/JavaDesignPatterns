@@ -21,7 +21,7 @@ In Lazy Instantiation, this method would check if the current instance is null a
 In this repository, I have provided an implementation of the `Singleton` under the `Singleton/Implementation/` directory.
 In addition, there is a `SingletonDriver` under the `Singleton/` folder which showcases how it can be used.
 
-## Acknowledgements
+## Acknowledgments
 
 - [javatpoint](https://www.javatpoint.com/singleton-design-pattern-in-java)
 - [TutorialsPoint](https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm)
