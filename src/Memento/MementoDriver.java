@@ -16,6 +16,9 @@ public class MementoDriver {
     /** Constant for the number of states to generate and display. */
     private static final int NUM_STATES = 3;
 
+    /**
+     * Main method of execution.
+     */
     public static void go() {
         // Create an Originator to generate saved states
         Originator<String> originator = new ConcreteOriginator();

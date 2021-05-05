@@ -1,6 +1,7 @@
 package App;
 
 import Memento.MementoDriver;
+import Singleton.SingletonDriver;
 
 /**
  * Driver Class.
@@ -29,6 +30,9 @@ public class Main {
                 case "memento": memento();
                                 break;
 
+                case "singleton": singleton();
+                                break;
+
                 default: System.out.println("`" + arg + "` not yet implemented");
                          break;
             }
@@ -48,6 +52,15 @@ public class Main {
     public static void memento() {
         System.out.println("\n------------- Executing Memento Driver -------------");
         MementoDriver driver = new MementoDriver();
+        driver.go();
+    }
+
+    /**
+     * Executes the Singleton driver.
+     */
+    public static void singleton() {
+        System.out.println("\n------------ Executing Singleton Driver ------------");
+        SingletonDriver driver = new SingletonDriver();
         driver.go();
     }
 }
