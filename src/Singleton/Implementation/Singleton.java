@@ -8,7 +8,7 @@ package Singleton.Implementation;
 public class Singleton {
 
     /** A private and static instance of the Singleton object. */
-    private static Singleton instance = new Singleton();
+    private static Singleton instance;
 
     /** A Singleton can have any number of fields. */
     private String name;
@@ -26,6 +26,11 @@ public class Singleton {
      * @return The only instance of the Singleton.
      */
     public static Singleton getInstance() {
+        // If the current global instance is null, create an instance
+        if (instance == null) {
+            instance = new Singleton();
+        }
+
         return instance;
     }
 
